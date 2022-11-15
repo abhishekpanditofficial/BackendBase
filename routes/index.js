@@ -1,0 +1,1 @@
+module.exports.TestRoute = require('./test.route');
