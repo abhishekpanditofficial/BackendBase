@@ -70,7 +70,7 @@ const options = {
     definition: {
         openapi: "3.0.0",
         info: {
-            title: "News App",
+            title: "Backend Base",
             version: "2.0.0",
             description: "This is a test desc."
         },
@@ -83,6 +83,8 @@ const options = {
 };
 
 const specs = swaggerJsdoc(options)
+
+app.get('/', (req,res) => res.send('Backend Base Working'));
 
 app.use("/docs", swaggerUI.serve, swaggerUI.setup(specs))
 
